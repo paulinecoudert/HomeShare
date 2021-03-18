@@ -1,6 +1,8 @@
 ﻿using HomeShare.Models;
+using HomeShare.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -30,6 +32,33 @@ namespace HomeShare.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact(ContactModel contact)
+        {
+            if (ModelState.IsValid)
+            {
+                DataContext ctx = new DataContext(ConfigurationManager.ConnectionStrings["Cnstr"].ConnectionString);
+
+                if (ctx.SaveContact(contact))
+                {
+                    ViewBag.SuccessMessage = "Message bien envoyé";
+                    return View();
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Message non enregistré";
+                    return View();
+                }
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Formulaire error";
+                return View();
+            }
+
         }
     }
 }

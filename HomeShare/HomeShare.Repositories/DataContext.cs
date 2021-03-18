@@ -14,6 +14,7 @@ namespace HomeShare.Repositories
         IConcreteRepository<BienEntity> _bienRepo;
         IConcreteRepository<PaysEntity> _paysRepo;
         IConcreteRepository<MembreEntity> _membreRepo;
+        IConcreteRepository<MessageEntity> _messRepo;
 
 
 
@@ -22,6 +23,7 @@ namespace HomeShare.Repositories
             _bienRepo = new BienRepository(connectionString);
             _paysRepo = new PaysRepository(connectionString);
             _membreRepo = new MembreRepository(connectionString);
+            _messRepo = new MessageRepository(connectionString);
 
 
 
@@ -85,6 +87,21 @@ namespace HomeShare.Repositories
 
             return _membreRepo.Insert(signUp);
 
+        }
+
+
+
+        public bool SaveContact(ContactModel cm)
+        {
+            //MAppers
+            MessageEntity me = new MessageEntity();
+            me.Nom = cm.Nom;
+            me.Email = cm.Email;
+            me.Telephone = cm.Telephone;
+            me.Information = cm.Information;
+
+
+            return _messRepo.Insert(me);
         }
 
 

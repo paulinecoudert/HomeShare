@@ -44,6 +44,7 @@
     <Compile Include="BienRepository.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="MembreRepository.cs" />
+    <Compile Include="MessageRepository.cs" />
     <Compile Include="PaysRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUpRepository.cs" />

@@ -77,5 +77,6 @@
     <Build Include="dbo\Stored Procedures\sp_RecupBienMembre_1.sql" />
     <Build Include="dbo\Stored Procedures\sp_RecupToutesInfosBien_1.sql" />
     <Build Include="dbo\Stored Procedures\sp_RecupBienDispo_1.sql" />
+    <Build Include="dbo\Tables\Message.sql" />
   </ItemGroup>
 </Project>
