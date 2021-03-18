@@ -45,6 +45,7 @@
     <Compile Include="MembreEntity.cs" />
     <Compile Include="PaysEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

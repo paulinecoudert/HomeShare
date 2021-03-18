@@ -66,6 +66,27 @@ namespace HomeShare.Repositories
             }
         }
 
+        public bool SaveSignUp(SignUpModel sm)
+        {
+            MembreEntity signUp = new MembreEntity();
+            //signUp.Rue = sm.Rue;
+            //signUp.Numero = sm.Numero;
+            //signUp.Ville = sm.Ville;
+            //signUp.CodePostal = sm.CodePostal;
+            signUp.Nom = sm.Nom;
+            signUp.Prenom = sm.Prenom;
+            signUp.Email = sm.Email;
+            signUp.Pays = sm.Pays;
+            signUp.Telephone = sm.Telephone;
+            signUp.Login = sm.Login;
+            signUp.Password = sm.Password;
+            
+
+
+            return _membreRepo.Insert(signUp);
+
+        }
+
 
 
     }
