@@ -84,3 +84,11 @@ C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeSh
 C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\obj\Debug\HomeShare.csproj.CopyComplete
 C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\obj\Debug\HomeShare.dll
 C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\obj\Debug\HomeShare.pdb
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.Models.dll
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.Repositories.dll
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.DAL.dll
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.Entities.dll
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.Models.pdb
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.Repositories.pdb
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.DAL.pdb
+C:\PaulineMonDossier\ExercicesWAD20\Asp.net\Epreuve_3\HomeShare\HomeShare\HomeShare\bin\HomeShare.Entities.pdb

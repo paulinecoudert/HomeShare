@@ -48,8 +48,12 @@ namespace HomeShare
                   
                  ));
 
+            bundles.Add(new StyleBundle("~/Content/Css3").Include(
+          "~/Css/Slitcss/style.css",
+                   "~/Css/mine.css"
 
-                
+              ));
+
         }
     }
 }

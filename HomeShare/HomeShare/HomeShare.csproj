@@ -124,6 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +134,7 @@
     <Content Include="Content\custom.css" />
     <Content Include="Content\style.css" />
     <Content Include="Css\bootstrap.css" />
+    <Content Include="Css\mine.css" />
     <Content Include="Css\owl.carousel.css" />
     <Content Include="Css\owl.theme.css" />
     <Content Include="Css\Slitcss\custom.css" />
@@ -163,6 +165,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\about.jpg" />
     <Content Include="images\advertisements.jpg" />
+    <Content Include="images\1.jpg" />
     <Content Include="images\agents\1.jpg" />
     <Content Include="images\agents\2.jpg" />
     <Content Include="images\agents\3.jpg" />
@@ -200,6 +203,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\jquery.ba-cond.min.js" />
@@ -239,10 +243,19 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\fonts\" />
     <Folder Include="assets\slitslider\js\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeShare.Models\HomeShare.Models.csproj">
+      <Project>{98b42ee5-761f-49e8-84f0-b16cf0ec5a45}</Project>
+      <Name>HomeShare.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeShare.Repositories\HomeShare.Repositories.csproj">
+      <Project>{f0eb2e8c-26a4-418d-acfd-0ca9310e1db0}</Project>
+      <Name>HomeShare.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
