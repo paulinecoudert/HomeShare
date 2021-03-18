@@ -40,7 +40,15 @@
                     <li class="active"><a href="/Home/Index">Home</a></li>
                     <li><a href="/Home/About">Voir les biens</a></li>
                     <li><a href="/Home/Contact">Contact</a></li>
-                    <li><a href="/Home/Login">Login</a></li>
+                    @if (HomeShare.Infra.SessionUtil.IsLogged)
+                    {
+                        <li><a class="@ViewBag.Contact" href="/Account/Logout">Logout</a></li>
+                    }
+                    else
+                    {
+                        <li><a class="@ViewBag.Contact" href="/Account/Login">Login</a></li>
+                    }
+            
                 </ul>
             </div>
             <!-- #Nav Ends -->

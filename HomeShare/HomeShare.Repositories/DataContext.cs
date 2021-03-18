@@ -12,14 +12,20 @@ namespace HomeShare.Repositories
    public class DataContext
     {
         IConcreteRepository<BienEntity> _bienRepo;
-        IConcreteRepository<BienEntity> _paysRepo;
+        IConcreteRepository<PaysEntity> _paysRepo;
+        IConcreteRepository<MembreEntity> _membreRepo;
 
 
 
         public DataContext (string connectionString)
-    {
-        _bienRepo = new BienRepository(connectionString);
-    }
+        {
+            _bienRepo = new BienRepository(connectionString);
+            _paysRepo = new PaysRepository(connectionString);
+            _membreRepo = new MembreRepository(connectionString);
+
+
+
+        }
 
     public List<BienModel> GetCinqBien()
     {
@@ -37,7 +43,28 @@ namespace HomeShare.Repositories
 
           
     }
+        public MembreModel UserAuth(LoginModel lm)
+        {
+            MembreEntity ue = ((MembreRepository)_membreRepo).GetFromLogin(lm.Login);
+            if (ue == null) return null;
+            if (ue != null)
+            {
+                return new MembreModel()
+                {
+                    IdMembre = ue.IdMembre,
+                    Nom = ue.Nom,
+                    Prenom = ue.Prenom,
+                    Login = ue.Login,
+                    Email = ue.Email,
 
+
+                };
+            }
+            else
+            {
+                return null;
+            }
+        }
 
 
 

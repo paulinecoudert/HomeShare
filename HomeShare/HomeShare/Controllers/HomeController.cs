@@ -11,7 +11,10 @@ namespace HomeShare.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Home = "active";
             HomeViewModel hm = new HomeViewModel();
+            Session["messageInfo"] = "ceci est un mesage";
+            Session.Abandon();
             return View(hm);
         }
 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeShare.Entities
+namespace HomeShare.Models
 {
-    public class MembreEntity
+   public class MembreModel
     {
         private int _idMembre, _pays;
         private string _nom, _prenom, _email, _telephone, _login, _password;
