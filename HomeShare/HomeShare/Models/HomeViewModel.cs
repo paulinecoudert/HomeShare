@@ -16,7 +16,7 @@ namespace HomeShare.Models
         private List<BienModel> _bienModels;
         public HomeViewModel()
         {
-            BienModels = ctx.GetCinqBien();
+            BienModels = ctx.GetAllBien();
         }
 
         public List<BienModel> BienModels

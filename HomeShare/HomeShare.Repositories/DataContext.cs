@@ -16,7 +16,7 @@ namespace HomeShare.Repositories
         IConcreteRepository<MembreEntity> _membreRepo;
         IConcreteRepository<MessageEntity> _messRepo;
         IConcreteRepository<BienEntity> _bienPaysRepo;
-        IConcreteRepository<BienEntity> _bienAvisRepo;
+        IConcreteRepository<BienEntity> _bienDernierRepo;
 
 
 
@@ -24,7 +24,7 @@ namespace HomeShare.Repositories
         {
             _bienRepo = new BienRepository(connectionString);
             _bienPaysRepo = new BienPaysRepository(connectionString);
-            _bienAvisRepo = new BienAvisRepository(connectionString);
+            _bienDernierRepo = new BienDernierRepository(connectionString);
             _paysRepo = new PaysRepository(connectionString);
             _membreRepo = new MembreRepository(connectionString);
             _messRepo = new MessageRepository(connectionString);
