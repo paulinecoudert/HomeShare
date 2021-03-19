@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BienAvisRepository.cs" />
+    <Compile Include="BienPaysRepository.cs" />
     <Compile Include="BienRepository.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="MembreRepository.cs" />

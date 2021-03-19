@@ -27,6 +27,20 @@ namespace HomeShare.Controllers
             return View(hm);
         }
 
+        public ActionResult Pays()
+        {
+            ViewBag.Message = " ";
+            BienViewModel hm = new BienViewModel();
+            return View(hm);
+        }
+
+
+        public ActionResult DernierBien()
+        {
+            ViewBag.Message = " ";
+            BienViewModel hm = new BienViewModel();
+            return View(hm);
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

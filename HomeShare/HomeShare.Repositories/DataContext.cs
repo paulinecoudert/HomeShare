@@ -15,29 +15,37 @@ namespace HomeShare.Repositories
         IConcreteRepository<PaysEntity> _paysRepo;
         IConcreteRepository<MembreEntity> _membreRepo;
         IConcreteRepository<MessageEntity> _messRepo;
+        IConcreteRepository<BienEntity> _bienPaysRepo;
+        IConcreteRepository<BienEntity> _bienAvisRepo;
 
 
 
         public DataContext (string connectionString)
         {
             _bienRepo = new BienRepository(connectionString);
+            _bienPaysRepo = new BienPaysRepository(connectionString);
+            _bienAvisRepo = new BienAvisRepository(connectionString);
             _paysRepo = new PaysRepository(connectionString);
             _membreRepo = new MembreRepository(connectionString);
             _messRepo = new MessageRepository(connectionString);
 
 
 
+
         }
 
-    public List<BienModel> GetCinqBien()
+    public List<BienModel> GetAllBien()
     {
             return _bienRepo.Get()
                 .Select(m =>
                new BienModel()
                {
+                   Titre = m.Titre,
                    DescCourte = m.DescCourte,
                    CodePostal = m.CodePostal,
                    Ville = m.Ville,
+                   Pays = m.Pays,
+                   NombrePerson= m.NombrePerson,
                    DescLong = m.DescLong,
                    Photo = m.Photo,
 
@@ -45,6 +53,47 @@ namespace HomeShare.Repositories
 
           
     }
+
+        public List<BienModel> GetPaysBien()
+        {
+            return _bienPaysRepo.Get()
+                .Select(m =>
+               new BienModel()
+               {
+                   Titre = m.Titre,
+                   DescCourte = m.DescCourte,
+                   CodePostal = m.CodePostal,
+                   Ville = m.Ville,
+                   Pays = m.Pays,
+                   NombrePerson = m.NombrePerson,
+                   DescLong = m.DescLong,
+                   Photo = m.Photo,
+
+               }).ToList();
+
+
+        }
+
+
+        public List<BienModel> GetCinqBien()
+        {
+            return _bienRepo.Get()
+                .Select(m =>
+               new BienModel()
+               {
+                   Titre = m.Titre,
+                   DescCourte = m.DescCourte,
+                   CodePostal = m.CodePostal,
+                   Ville = m.Ville,
+                   Pays = m.Pays,
+                   NombrePerson = m.NombrePerson,
+                   DescLong = m.DescLong,
+                   Photo = m.Photo,
+
+               }).ToList();
+
+
+        }
 
 
 

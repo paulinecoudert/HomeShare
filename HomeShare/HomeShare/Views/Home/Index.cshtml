@@ -20,7 +20,7 @@
                         <blockquote>
                             <p class="location"><span class="glyphicon glyphicon-map-marker"></span> @item.CodePostal @item.Ville </p>
                             <p>@item.DescLong</p>
-                            <cite><a class="@ViewBag.Contact" href="/Account/SignUp">Inscrivez vous</a></cite>
+                            <cite><a class="@ViewBag.Contact" href="/Account/SignUp" style="color:white;">Inscrivez vous</a></cite>
                         </blockquote>
                     </div>
                 </div>
@@ -146,18 +146,19 @@
 
             @foreach (HomeShare.Models.BienModel item in Model.BienModels)
             {
-                <div class="properties">
+            <div class="properties" style="height: 400px;">
 
-                    <div class="image-holder">
-                        <img src="/images/properties/@item.Photo" class="img-responsive" alt="properties" />
-                        <div class="status sold">Sold</div>
-                    </div>
-                    <h4><a href="property-detail.php" class="seul">Villa</a></h4>
-                    <p class="price">120</p>
-                    <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-                    <a class="btn btn-primary" href="property-detail.php">12</a>
-                    
+                <div class="image-holder">
+                    <img src="/images/properties/@item.Photo" class="img-responsive" alt="properties" />
+                    <div class="status sold">Sold</div>
                 </div>
+                <h4><a href="property-detail.php">@item.Titre</a></h4>
+                <p class="price">@item.Ville</p>
+                <p class="price">@item.DescCourte</p>
+
+                <a class="btn btn-primary" href="property-detail.php">Capacité: @item.NombrePerson</a>
+
+            </div>
             }
                 @*<div class="properties">
                 <div class="image-holder">

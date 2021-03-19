@@ -1,0 +1,53 @@
+﻿@model HomeShare.Models.BienViewModel
+
+@{
+    ViewBag.Title = "Pays";
+}
+
+<div style="margin-top: 20px ;margin-left: 260px">
+    <button type="button" class="btn btn-light ml-5 " style="border: 1px solid silver;height:30px;margin-left: 100px;">
+        @Html.ActionLink("Par Pays", "Pays", "Home")
+        @*<a href="/Home/FormBien">Ajouter un bien</a>*@
+    </button>
+    <button type="button" class="btn btn-light ml-5 " style="border: 1px solid silver;height:30px;margin-left: 100px;">
+        @Html.ActionLink("Les cinq derniers biens", "DernierBien", "Home")
+        @*<a href="/Home/FormBien">Ajouter un bien</a>*@
+    </button>
+    <button type="button" class="btn btn-light ml-5 " style="border: 1px solid silver;height:30px;margin-left: 100px;">
+        @Html.ActionLink("Tous", "About", "Home")
+        @*<a href="/Home/FormBien">Ajouter un bien</a>*@
+    </button>
+</div>
+
+
+<h4 style ="margin-top: 50px ;margin-left: 60px">
+    Classement par Pays</h4>
+
+    <div class="container">
+        <div class="row">
+            @foreach (HomeShare.Models.BienModel item in Model.BienModels)
+            {
+                <div class="col-sm-6 col-md-4 col-lg-3 mt-4" style="padding: 20px">
+                    <div class="card" style="border: 1px solid silver; height:450px; padding: 10px ">
+                        <img class=" card-img-top" style="width: 230px" src="~/images/properties/@item.Photo">
+                        <div class="card-block">
+                            <h4 class="card-title" style="color: dimgray;">@item.Titre</h4>
+                            <div class="meta">
+                                <a href="#" class="text-secondary" style="color: forestgreen">@item.DescCourte</a>
+                            </div>
+                            <div class="card-text">
+                                @item.DescLong
+                            </div>
+                            <div class="card-text">
+                                Capacité Personnes: @item.NombrePerson
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="float-right">Ville: @item.Ville</span><br />
+                            <span><i class="">Assurance obligatoire: @item.AssuranceObligatoire</i></span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

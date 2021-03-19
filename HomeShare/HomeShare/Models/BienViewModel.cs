@@ -12,10 +12,18 @@ namespace HomeShare.Models
         private DataContext ctx = new DataContext(ConfigurationManager.ConnectionStrings["Cnstr"].ConnectionString);
 
         private List<BienModel> _bienModels;
+        private List<BienModel> _bienToutModels;
+        private List<BienModel> _bienCinqModels;
+
         public BienViewModel()
         {
-            BienModels = ctx.GetCinqBien();
+            BienModels = ctx.GetPaysBien();
+            BienToutModels = ctx.GetAllBien();
+            BienCinqModels = ctx.GetCinqBien();
+            
         }
+
+
 
         public List<BienModel> BienModels
         {
@@ -27,6 +35,32 @@ namespace HomeShare.Models
             set
             {
                 _bienModels = value;
+            }
+        }
+
+        public List<BienModel> BienToutModels
+        {
+            get
+            {
+                return _bienToutModels;
+            }
+
+            set
+            {
+                _bienToutModels = value;
+            }
+        }
+
+        public List<BienModel> BienCinqModels
+        {
+            get
+            {
+                return _bienCinqModels;
+            }
+
+            set
+            {
+                _bienCinqModels = value;
             }
         }
     }

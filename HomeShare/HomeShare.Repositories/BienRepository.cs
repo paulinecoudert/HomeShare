@@ -22,7 +22,7 @@ namespace HomeShare.Repositories
 
         public List<BienEntity> Get()
         {
-            string requete = "Select * from Vue_CinqDernierBiens ";
+            string requete = "Select * from BienEchange ";
 
             return base.Get(requete);
         }
@@ -65,7 +65,7 @@ namespace HomeShare.Repositories
            (@titre
            ,@DescCourte
            ,@DescLong
-           @NombrePerson
+           ,@NombrePerson
            ,@Pays
            ,@Ville
            ,@Rue

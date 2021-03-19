@@ -8,8 +8,8 @@
 
 
 
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2 style="margin-left:200px;">Get in Touch!</h2>
+<h3 style="margin-left:200px;">N'hesitez pas à nous joindre</h3>
 
 
 
@@ -18,7 +18,7 @@
 
 <!---contact-->
 <div class="row">
-    <div class="col-lg-8 offset-lg-2">
+    <div class="col-lg-8 offset-lg-2" style="margin-left:200px;">
         <form class="form-wrapper" method="post">
 
             @Html.AntiForgeryToken()
@@ -27,12 +27,12 @@
             <input type="email" name="Email" class="form-control" placeholder="Email address">
             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             <input type="text" name="Telephone" class="form-control" placeholder="Phone">
-            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" }) 
-      
+            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
+
 
 
             <textarea class="form-control" name="Information" placeholder="Your message"></textarea><br /><br />
-            <button type="submit" class="btn btn-primary">Send <i class="fa fa-envelope-open-o"></i></button>
+            <button type="submit" class="btn btn-primary" style="margin-bottom:80px;">Send <i class="fa fa-envelope-open-o"></i></button>
         </form>
         @if (ViewBag.SuccessMessage != null)
         {
@@ -46,7 +46,7 @@
     </div>
 </div>
 
-<address>
+@*<address>
     One Microsoft Way<br />
     Redmond, WA 98052-6399<br />
     <abbr title="Phone">P:</abbr>
@@ -56,4 +56,4 @@
 <address>
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</address>*@
