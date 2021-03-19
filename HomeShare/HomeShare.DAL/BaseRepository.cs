@@ -57,6 +57,8 @@ namespace HomeShare.DAL.Repositories
             }
         }
 
+   
+
         protected List<T> Get(string requete)
         {
             if (Connect())
@@ -118,6 +120,42 @@ namespace HomeShare.DAL.Repositories
                 return null;
             }
         }
+
+        //protected bool Insert(T toInsert, string insertRequete, out int id)
+        //{
+        //    id = 0;
+        //    if (Connect())
+        //    {
+        //        SqlCommand oCmd = new SqlCommand(insertRequete, connection);
+
+        //        //Je suppose que le nom des paramètres dans la requête = le nom de la propriété dans l'objet T
+        //        oCmd.Parameters.AddRange(MapToSqlParameter(toInsert));
+
+        //        bool isInserted = false;
+        //        try
+        //        {
+        //            id = (int)oCmd.ExecuteScalar(); //ajout de la methode scalar
+        //            isInserted = true;
+        //        }
+        //        catch (Exception ex)
+        //        {
+
+        //            isInserted = false;
+        //        }
+
+        //        //fermer ma connexion vers la DB
+        //        Disconnect();
+        //        //renvoyer le résultat de l'insertion
+        //        return isInserted;
+
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+
+
+        //}
 
         protected bool Insert(T toInsert, string insertRequete)
         {

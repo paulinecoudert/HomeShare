@@ -45,6 +45,9 @@ namespace HomeShare.Repositories
 
           
     }
+
+
+
         public MembreModel UserAuth(LoginModel lm)
         {
             MembreEntity ue = ((MembreRepository)_membreRepo).GetFromLogin(lm.Login);
@@ -103,6 +106,39 @@ namespace HomeShare.Repositories
 
             return _messRepo.Insert(me);
         }
+
+
+        public bool SaveBien(BienModel bm)
+        {
+            //MAppers
+            BienEntity be = new BienEntity();
+
+            be.Titre = bm.Titre;
+            be.DescCourte = bm.DescCourte;
+            be.DescLong = bm.DescLong;
+            be.Photo = bm.Photo;
+            be.Pays = bm.Pays;
+          
+
+
+
+
+            //int idBien = 0;
+            //bool test = ((BienRepository)_bienRepo).InsertWithId(be, out idBien);
+            //if (test)
+            //{
+            //    bm.IdBien = idBien;
+
+            //    return ((PaysRepository)_paysRepo).InsertFromProject(bm.Pays, idBien);
+            //}
+            //else
+            //    return false;
+
+            return _bienRepo.Insert(be);
+
+
+        }
+
 
 
 

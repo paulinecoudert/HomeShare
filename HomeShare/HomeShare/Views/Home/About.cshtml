@@ -1,7 +1,38 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿@model HomeShare.Models.BienViewModel
+
+@{
+    ViewBag.Title = "Les biens à échanger";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2 style="margin-left: 50px">@ViewBag.Title.</h2>
+<h3 style="margin-left: 50px">@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+
+
+    <div class="container">
+        <div class="row">
+            @foreach (HomeShare.Models.BienModel item in Model.BienModels)
+            {
+                <div class="col-sm-6 col-md-4 col-lg-3 mt-4" style="padding: 20px">
+                    <div class="card" style="border: 1px solid silver; height:450px; padding: 10px ">
+                        <img class=" card-img-top" style="width: 230px" src="~/images/properties/@item.Photo">
+                        <div class="card-block">
+                            <h4 class="card-title" style="color: dimgray;margin-left: 100px">@item.Titre</h4>
+                            <div class="meta">
+                                <a href="#" class="text-secondary" style="color: forestgreen">@item.DescCourte</a>
+                            </div>
+                            <div class="card-text">
+                                @item.DescLong
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="float-right">Ville: @item.Ville</span><br/>
+                            <span><i class="">Assurance obligatoire: @item.AssuranceObligatoire</i></span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+

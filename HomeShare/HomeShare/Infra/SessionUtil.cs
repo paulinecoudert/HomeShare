@@ -37,6 +37,18 @@ namespace HomeShare.Infra
         }
 
 
+        public static BienModel ConnectedBien
+        {
+            get
+            {
+                return (BienModel)HttpContext.Current.Session["ConnectedBien"];
+            }
+
+            set { HttpContext.Current.Session["ConnectedBien"] = value; }
+
+        }
+
+
     }
 }
 

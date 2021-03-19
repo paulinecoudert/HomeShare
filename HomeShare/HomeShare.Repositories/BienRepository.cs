@@ -29,14 +29,59 @@ namespace HomeShare.Repositories
 
 
 
+
+
         public BienEntity GetOne(int PK)
         {
             throw new NotImplementedException();
         }
 
-        public bool Insert(BienEntity toInsert)
+        //public bool Insert(BienEntity toInsert)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public bool Insert(BienEntity toInsert) 
         {
-            throw new NotImplementedException();
+            string requete = @"INSERT INTO[dbo].[BienEchange]
+            (titre
+           ,DescCourte
+           ,DescLong
+           ,NombrePerson
+           ,Pays
+           ,Ville
+           ,Rue
+           ,Numero
+           ,CodePostal
+           ,Photo
+           ,AssuranceObligatoire
+           ,isEnabled
+           ,DisabledDate
+           ,Latitude
+           ,Longitude
+           ,idMembre
+           ,DateCreation)
+     VALUES
+           (@titre
+           ,@DescCourte
+           ,@DescLong
+           @NombrePerson
+           ,@Pays
+           ,@Ville
+           ,@Rue
+           ,@Numero
+           ,@CodePostal
+           ,@Photo
+           ,@AssuranceObligatoire
+           ,@isEnabled
+           ,@DisabledDate
+           ,@Latitude
+           ,@Longitude
+           ,@idMembre
+           ,@DateCreation)";
+
+
+            return base.Insert(toInsert, requete);
         }
 
         public bool Update(BienEntity toUpdate)

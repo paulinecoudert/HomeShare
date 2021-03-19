@@ -128,6 +128,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infra\SessionUtil.cs" />
+    <Compile Include="Models\BienViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -212,6 +213,7 @@
     <Content Include="Areas\Membre\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Membre\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Membre\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Membre\Views\Home\FormBien.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\jquery.ba-cond.min.js" />
@@ -254,6 +256,7 @@
     <Folder Include="Areas\Membre\Data\" />
     <Folder Include="assets\fonts\" />
     <Folder Include="assets\slitslider\js\" />
+    <Folder Include="images\upload\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

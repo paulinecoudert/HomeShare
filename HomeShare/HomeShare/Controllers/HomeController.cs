@@ -23,8 +23,8 @@ namespace HomeShare.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
-            return View();
+           BienViewModel hm = new BienViewModel();
+            return View(hm);
         }
 
         public ActionResult Contact()
